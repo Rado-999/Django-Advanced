@@ -1,0 +1,16 @@
+{% extends 'UserLab/base.html' %}
+
+{% block content %}
+    <div class="container mt-5">
+        <h1>Welcome to Django User Lab Demo !</h1>
+        
+        <a href ='{% url 'login page' %}'>
+            <button class="btn btn-primary">Login</button>
+        </a>
+        
+        <a href ='{% url 'register page' %}'>
+            <button type="button" class="btn btn-info">Register</button>
+        </a>
+        
+    </div>
+{% endblock %}

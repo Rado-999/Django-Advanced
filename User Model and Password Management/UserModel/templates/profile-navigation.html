@@ -1,0 +1,18 @@
+{% block profile-nav %}
+    
+        <ul class="nav justify-content-center">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'profile-about' pk=user.pk %}">About Me</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Projects</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Contacts</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href='{% url 'index' %}'>Log out</a>
+        </li>
+        </ul>
+    
+{% endblock %}

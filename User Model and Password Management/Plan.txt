@@ -1,0 +1,39 @@
+1.Users. 
+	
+	User are individuall accessing to a website via web browser.They can:
+		- Intercat with the site 
+		- facilitating fucntionalities (access restricition)
+		- profile registration
+	
+	User fields:
+		
+		# This is a base user model fields that we implement #
+		- username - required
+		- password - required
+		- email - optional
+		- first_name - optional
+		- last_name - optional
+
+		# This is default fields that come with django #	
+		- groups - categorize users and assign permissions to them based on the group they belong to
+		- user permissions - giving the user permissions based on in what group are they
+		- is_staff - Boolean. Allows this user to access the admin site (typically only superusers have True)
+		- is_active - Boolean.
+		- is_superuser - Boolean. If this is true the user have all permissions on website
+		- last_login - date/time of the user's last login
+		- date_joined - date/time when user is created
+
+	User Attributes:
+
+		- is_authenticated - Return True if the account is logged in our website
+		- is_anonymous - This attribute isn't practically used
+
+	User Methods:
+
+		- get_username() - Return the username for the user (Better than 'User['username']')
+		- get_full_name() - Return full name of User
+		- get_short_name() - Return first name
+
+
+2.Create User
+	To create a user we use create_user() method

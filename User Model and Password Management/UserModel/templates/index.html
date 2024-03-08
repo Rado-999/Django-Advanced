@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+        <div class="container text-center">
+        <p class="text-center">Please Login or if u don't have account Register</p>
+        <a href="{% url 'login' %}">
+            <button type="button" class="btn btn-primary">Log In</button>
+        </a>
+
+        <a href="{% url 'register2' %}">
+            <button type="button" class="btn btn-info">Register</button>
+        </a>
+
+    </div>
+{% endblock %}

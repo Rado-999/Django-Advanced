@@ -1,0 +1,30 @@
+With Identification we recognize a user that is requesting our server with Authentication factors
+that we utilized to give acces to a system which acces can be used to Authorizate what user can do in our website.
+
+
+1. Authentication.
+
+	User provided credentials are compared with that in our database giving him access if match(like login).
+	Authentication Factors(data or attributes) utilized to authenticate a user who request access to a system.
+	
+
+2. Django Authentication.
+	
+	a) Django authenticaton system manages authentication and authorization including:
+		- users, groups and permissions
+		- password hashing system
+		- forms and view tools for user login and content restriction
+		- pluggable backend system
+		- cookie-based user sessiong handling
+	
+	b) Configuration is pre-included in the settings.py:
+		- django.cotrib.auth - the core of the authentication framework	
+		- django.contrib.contenttypes 
+
+3. Permission and Athorization
+	a) Authorization - With administrator we give to authenticated users permission what they can do in our 
+		website like privileges and preferences.The administrator set a configuration to all kind of users
+			
+		
+
+	
