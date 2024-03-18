@@ -1,5 +1,6 @@
 from django.contrib.auth import get_user_model
 from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth.models import User
 from django.contrib.auth.views import LoginView, LogoutView
 from django.http import HttpResponse
 from django.shortcuts import render
@@ -9,6 +10,7 @@ from django.views.generic import CreateView, DetailView
 
 from UserModel.UserApp import models
 from UserModel.UserApp.forms import UserRegistrationForm, UserRegistrationForm2
+
 
 
 # Create your views here.
@@ -55,6 +57,11 @@ class UserDetailsView(DetailView):
 
 class LogoutUserView(LogoutView):
     next_page = '/custom-logout-page/'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['next_page'] = self.next_page
+
 
 
 def profile(request):
